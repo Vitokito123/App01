@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Viaje</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <h4>Origen: </h4>
+    <h4>Destino: </h4>
+
+  </ion-card>
+
+  <ion-content [fullscreen]="true">
+    <div class="box">
+      <ion-list>
+        <ion-item >
+          <ion-input [(ngModel)]="id" label="id"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="patente" label="patente"></ion-input>
+        </ion-item>
+  
+        <ion-item >
+          <ion-input [(ngModel)]="marca" label="marca"></ion-input>
+        </ion-item>
+  
+        <ion-item >
+          <ion-input [(ngModel)]="modelo" label="modelo"></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-input [(ngModel)]="anio" label="anio"></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-input [(ngModel)]="color" label="color"></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-input [(ngModel)]="tipo_combustible" label="tipo_combustible"></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-input [(ngModel)]="capacidad_pasajeros" label="capacidad_pasajeros"></ion-input>
+        </ion-item>
+
+        <img *ngIf="imagen" [src]="imagen.src" height="100" width="100" alt="">
+  
+  
+        <ion-button (click)="takePhoto()">
+          <ion-icon style="margin-left: 10px;" name="camera"> </ion-icon>
+  
+        </ion-button>
+  
+  
+  
+  
+  
+      </ion-list>
+
+      <ion-button  (click)="registrovehiculo()"> Registrar vehiculo</ion-button>
+  
+    </div>
+  </ion-content>
+
+
+
+
+</ion-content>

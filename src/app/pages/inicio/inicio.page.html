@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon (click)="logout()" name="lock-closed" slot="end"></ion-icon>
+    <ion-title>HOME</ion-title>
+  </ion-toolbar>
+</ion-header>  
+
+<ion-content [fullscreen]="true">
+
+
+
+  <ng-container *ngIf="loaded"> 
+    <h1>{{correo}}</h1>
+
+
+    <ion-button (click)="viaje()">
+      Agregar vehiculo
+    </ion-button>
+  
+  
+    <ion-card #card>
+      <ion-card-content>Card</ion-card-content>
+    </ion-card>
+    
+    <ion-button (click)="play()">Play</ion-button>
+    <ion-button (click)="pause()">Pause</ion-button>
+    <ion-button (click)="stop()">Stop</ion-button>
+
+  </ng-container>
+
+  <ion-img *ngIf="usuario.length > 0" [src]="usuario[0].imagen_usuario"></ion-img>
+
+
+  <ion-list *ngIf="!loaded">
+    <ion-list-header>
+      <h3>
+        <ion-skeleton-text [animated]="true" style="width: 150px; height: 30px;"></ion-skeleton-text>
+      </h3>
+    </ion-list-header>
+    
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-toolbar slot="bottom">
+    <ion-icon (click)="logout()" name="lock-closed" slot="end"></ion-icon>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+
+</ion-content>
+
+
+
+
+
